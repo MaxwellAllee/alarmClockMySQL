@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alarm Clock</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/style/clock.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class='snooze py-5'><button type="button" id='snooze' class="btn btn-secondary"><h1>SNOOZE</h1></button></div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class='time text-center'><button type="button" id='start' class="btn btn-secondary">Start</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="row bottom">
+            
+            <div class="col-sm-2">
+                <div class='py-5'><button type="button" id='stop' class="btn btn-danger"><h1>STOP</h1></button></div>
+            </div>
+            <div class="col-sm-8">
+            </div>
+            <div class="col-sm-2">
+                <div class='py-5'><button type="button" id='set' class="btn btn-secondary"><h1>Set Alarm</h1></button></div>
+            </div>
+        </div>
+    <script src="/js/clockTime.js"></script>
+    <script src="/js/alarm.js"></script>
+    <div class="modal fade show text-dark " id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                Alarm Time: <input type="time" style="font-size: 3rem"  id='timeWanted'><br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" onclick="save()"  class="  btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+</html>
